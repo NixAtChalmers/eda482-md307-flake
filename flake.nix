@@ -16,8 +16,8 @@
     };
     inherit (pkgs) lib stdenv;
 
-    mdx07-binaries = pkgs.callPackage ./mdx07-binaries.nix {};
-    riscv32-gcc = pkgs.callPackage ./riscv32-gcc.nix {};
+    mdx07-binaries = pkgs.callPackage ./packages/mdx07-binaries.nix {};
+    riscv32-gcc = pkgs.callPackage ./packages/riscv32-gcc.nix {};
   in {
     packages.${system} = {
       inherit mdx07-binaries riscv32-gcc;
