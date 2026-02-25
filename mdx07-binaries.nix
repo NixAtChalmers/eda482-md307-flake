@@ -18,7 +18,7 @@
   imagemagick,
   ...
 }: let
-  hash = "2597eab47fe4a58a1392c682976a1b04a23b7462";
+  ref = "75f2ccc323a3f7e59476e43dbe50d6e5a86b2ebd";
 
   desktopItem = makeDesktopItem {
     name = "simserver";
@@ -29,11 +29,11 @@
 in
   stdenv.mkDerivation rec {
     pname = "mdx07-binaries";
-    version = "0-unstable-2026-01-20";
+    version = "0-unstable-2026-02-25";
 
     src = fetchurl {
-      url = "https://git.chalmers.se/erik.sintorn/mdx07-binaries/-/archive/${hash}/mdx07-binaries-main.tar.gz";
-      sha256 = "sha256-uKw8r1KC3QWp9bFy8YmJcl/9FC5z6Ssv3BAfmzl1CMQ=";
+      url = "https://git.chalmers.se/erik.sintorn/mdx07-binaries/-/archive/${ref}/mdx07-binaries-main.tar.gz";
+      sha256 = "sha256-Viqq5/qxhrJx8kOmbzdgqi5PlGnxRjvd7gw8hxpbEow=";
     };
 
     nativeBuildInputs = [autoPatchelfHook imagemagick];
