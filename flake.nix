@@ -18,9 +18,10 @@
 
     mdx07-binaries = pkgs.callPackage ./packages/mdx07-binaries.nix {};
     riscv32-gcc = pkgs.callPackage ./packages/riscv32-gcc.nix {};
+    simserver-wine = pkgs.callPackage ./packages/simserver-wine.nix {};
   in {
     packages.${system} = {
-      inherit mdx07-binaries riscv32-gcc;
+      inherit mdx07-binaries riscv32-gcc simserver-wine;
     };
 
     nixosModules.default = {
