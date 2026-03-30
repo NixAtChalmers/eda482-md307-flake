@@ -10,7 +10,7 @@ Add the flake input to your `flake.nix`:
 
 ```nix
 {
-  inputs.md307.url = "github:NixAtChalmers/eda482-md307-flake";
+  inputs.md307.url = "github:LinuxAtChalmers/eda482-md307-flake";
 }
 ```
 
